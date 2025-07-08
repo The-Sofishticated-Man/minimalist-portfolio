@@ -7,7 +7,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex min-h-screen border-2 border-foreground ">{children}</body>
+      <body className="flex h-screen ">{children}</body>
     </html>
   );
 }

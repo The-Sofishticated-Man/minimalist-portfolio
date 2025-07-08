@@ -4,7 +4,7 @@ export default function MainInfo(){
     return(
       <div
         id="crucial"
-        className="border-2 border-foreground flex-1/3 px-30 py-15"
+        className="flex-1/3 px-30 py-15 "
       >
         <Image
           className="rounded-full mb-4"
@@ -42,7 +42,7 @@ export default function MainInfo(){
               Resume
             </a>
             <a
-              href="https://github.com/thesofishticatedman"
+              href="https://github.com/the-sofishticated-man"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
@@ -76,7 +76,7 @@ export default function MainInfo(){
               </svg>
             </a>
             <a
-              href="www.linkedin.com/in/islam-lameche-8266802a1"
+              href="https://linkedin.com/in/islam-lameche-8266802a1"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"

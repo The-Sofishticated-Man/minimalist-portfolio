@@ -6,15 +6,17 @@ function ExperienceArticle({
   duration,
   img,
   achievements,
+  skills
 }: {
   title: string;
   entity: string;
   duration: string;
   img: string | StaticImageData;
   achievements: string[];
+  skills: string[];
 }) {
   return (
-    <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gray-600">
+    <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gray-600 mb-10">
       <div className="flex items-start mb-2">
         <div className="bg-white rounded-full p-2 mr-4 w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
           <Image
@@ -41,7 +43,7 @@ function ExperienceArticle({
           );
         })}
       </ul>
-      <SkillList skills={["lmao", "idk"]} color="green" />
+      <SkillList skills={skills} />
     </div>
   );
 }
