@@ -131,21 +131,27 @@ function SecondaryInfo() {
       </InfoSection>
       <InfoSection title="Education" id="education">
         <EducationArticle
-          title="Bachelor  in Computer Science"
+          title="Bachelor in Computer Science"
           entity="University of Ghardaia"
-          duration="2021 - Present"
+          duration="2023 - Present"
           img={ghardaiauniverstylogo}
           courses={[
-            "Real Analysis",
             "Data Structures and Algorithms",
-            "Linear Algebra",
             "Software Engineering Principles",
-            "Calculus 1,2,3 and 4",
-            "Discrete Mathematics",
-            "Probability and Statistics",
             "Database Management Systems",
-            "Computer Networks",
             "Operating Systems",
+            "Computer Networks",
+            "Web Development",
+            "Probability and Statistics",
+            "Discrete Mathematics",
+            "Linear Algebra",
+            "Graph Theory",
+            "Mathematical Logic",
+            "Information Systems",
+            "Numerical Methods",
+            "Real Analysis",
+            "Calculus 1,2,3 and 4",
+            "Computer Architecture",
           ]}
         />
       </InfoSection>
