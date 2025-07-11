@@ -7,7 +7,9 @@ import ProjectArticle from "./ProjectArticle";
 import gdglogo from "../../../public/images/entities/gdglogo.webp";
 import erinovlogo from "../../../public/images/entities/erinovlogo.jpg";
 import ghardaiauniverstylogo from "../../../public/images/entities/ghardaiauniversitylogo.webp";
+
 import secretMessagelogo from "../../../public/images/projects/Secret Message.png";
+import webcrawlerlogo from "../../../public/images/projects/webcrawlerlogo.jpg";
 
 function SecondaryInfo() {
   return (
@@ -180,6 +182,28 @@ function SecondaryInfo() {
           ]}
           links={{
             github: "https://github.com/the-sofishticated-man/secret-message",
+          }}
+        />
+        <ProjectArticle
+          title="Snapchat Webcrawler"
+          description="An app built using Python and Selenium that provides a wrapper API for sending and reading messages"
+          img={webcrawlerlogo} 
+          achievements={[
+            "Automated Login: Developed a system to log in to Snapchat accounts autonomously using Selenium.",
+            "Message Handling: Created a API wrapper to send and read messages programmatically.",
+            "Web Automation: Leveraged Selenium for efficient web interaction and data extraction.",
+          ]}
+          technologies={[
+            "Python",
+            "Selenium",
+            "API Development",
+            "Web Automation",
+            "Web Scraping",
+            "Design Patterns"
+          ]}
+          links={{
+            github:
+              "https://github.com/the-sofishticated-man/snapchat-webcrawler", // Replace with the actual GitHub link if available
           }}
         />
       </InfoSection>
