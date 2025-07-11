@@ -35,10 +35,10 @@ function SecondaryInfo() {
         </p>
         <p className="text-gray-300 mb-4">
           {" "}
-          I’m especially interested in game development, systems design, and
-          exploring emerging technologies. Right now, I’m focused on honing my
-          skills and creating projects that showcase my creativity and technical
-          abilities.
+          I’m especially interested in artificial intelligence, game
+          development, systems design, and exploring emerging technologies.
+          Right now, I’m focused on honing my skills and creating projects that
+          showcase my creativity and technical abilities.
         </p>
       </InfoSection>
       <InfoSection title="Skills" id="skills">
@@ -187,7 +187,7 @@ function SecondaryInfo() {
         <ProjectArticle
           title="Snapchat Webcrawler"
           description="An app built using Python and Selenium that provides a wrapper API for sending and reading messages"
-          img={webcrawlerlogo} 
+          img={webcrawlerlogo}
           achievements={[
             "Automated Login: Developed a system to log in to Snapchat accounts autonomously using Selenium.",
             "Message Handling: Created a API wrapper to send and read messages programmatically.",
@@ -199,7 +199,7 @@ function SecondaryInfo() {
             "API Development",
             "Web Automation",
             "Web Scraping",
-            "Design Patterns"
+            "Design Patterns",
           ]}
           links={{
             github:
