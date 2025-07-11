@@ -97,7 +97,7 @@ export default function MainInfo(){
         </div>
         <h2 className="text-2xl my-4 font-bold">Want to Work Together?</h2>
         <button
-          className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded transition-colors"
+          className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded transition-colors cursor-pointer"
           tabIndex={0}
           style={{ transform: "none" }}
         >

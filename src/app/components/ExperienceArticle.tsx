@@ -6,7 +6,7 @@ function ExperienceArticle({
   duration,
   img,
   achievements,
-  skills
+  skills,
 }: {
   title: string;
   entity: string;

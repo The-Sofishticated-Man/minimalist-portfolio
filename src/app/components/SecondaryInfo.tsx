@@ -1,9 +1,13 @@
 import ExperienceArticle from "./ExperienceArticle";
 import InfoSection from "./InfoSection";
 import SkillArticle from "./SkillArticle";
+import EducationArticle from "./EducationArticle";
+import ProjectArticle from "./ProjectArticle";
 
 import gdglogo from "../../../public/images/entities/gdglogo.webp";
 import erinovlogo from "../../../public/images/entities/erinovlogo.jpg";
+import ghardaiauniverstylogo from "../../../public/images/entities/ghardaiauniversitylogo.webp";
+import secretMessagelogo from "../../../public/images/projects/Secret Message.png";
 
 function SecondaryInfo() {
   return (
@@ -23,9 +27,9 @@ function SecondaryInfo() {
         <p className="text-gray-300 mb-4">
           {" "}
           In my first year, I was honored to be named valedictorian of a class
-          of 250 students. I&apos;m also proud to serve as the GDG Ghardaia Dev Team
-          Leader, where I collaborate with other developers to lead projects,
-          share knowledge, and grow our local tech community.
+          of 250 students. I&apos;m also proud to serve as the GDG Ghardaia Dev
+          Team Leader, where I collaborate with other developers to lead
+          projects, share knowledge, and grow our local tech community.
         </p>
         <p className="text-gray-300 mb-4">
           {" "}
@@ -125,8 +129,55 @@ function SecondaryInfo() {
           ]}
         />
       </InfoSection>
+      <InfoSection title="Education" id="education">
+        <EducationArticle
+          title="Bachelor  in Computer Science"
+          entity="University of Ghardaia"
+          duration="2021 - Present"
+          img={ghardaiauniverstylogo}
+          courses={[
+            "Real Analysis",
+            "Data Structures and Algorithms",
+            "Linear Algebra",
+            "Software Engineering Principles",
+            "Calculus 1,2,3 and 4",
+            "Discrete Mathematics",
+            "Probability and Statistics",
+            "Database Management Systems",
+            "Computer Networks",
+            "Operating Systems",
+          ]}
+        />
+      </InfoSection>
+      <InfoSection title="Projects" id="projects">
+        <ProjectArticle
+          title="Secret Message"
+          description="An anonymous messaging app to get feedback or just have fun"
+          img={secretMessagelogo}
+          achievements={[
+            "JWT Authentication from Scratch: Secure login system using Web Tokens (JWT), supports both Access Tokens and Refresh Tokens, with token rotation and expiration handling.",
+            "Full-Stack Data Sanitisation: Backend protects against injection attacks with input validation and sanitisation; frontend cleans user input to prevent XSS and other client-side vulnerabilities.",
+            "Fast Routing & Data Fetching: Efficient navigation with React Router v6+ and seamless async data fetching using React Query, including built-in caching, background updates, and revalidation.",
+            "Responsive Design: Fully responsive layout optimised for mobile, tablet, and desktop using flexible UI components and modern CSS practices.",
+          ]}
+          technologies={[
+            "React",
+            "TypeScript",
+            "MongoDB",
+            "Tailwind",
+            "React Router",
+            "React Query",
+            "JWT",
+            "Node.js",
+            "Express js",
+            "Bootstrap",
+          ]}
+          links={{
+            github: "https://github.com/the-sofishticated-man/secret-message",
+          }}
+        />
+      </InfoSection>
     </div>
   );
 }
-
 export default SecondaryInfo;
