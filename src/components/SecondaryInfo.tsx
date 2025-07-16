@@ -4,12 +4,12 @@ import SkillArticle from "./SkillArticle";
 import EducationArticle from "./EducationArticle";
 import ProjectArticle from "./ProjectArticle";
 
-import gdglogo from "../../../public/images/entities/gdglogo.webp";
-import erinovlogo from "../../../public/images/entities/erinovlogo.jpg";
-import ghardaiauniverstylogo from "../../../public/images/entities/ghardaiauniversitylogo.webp";
+import gdglogo from "../../public/images/entities/gdglogo.webp";
+import erinovlogo from "../../public/images/entities/erinovlogo.jpg";
+import ghardaiauniverstylogo from "../../public/images/entities/ghardaiauniversitylogo.webp";
 
-import secretMessagelogo from "../../../public/images/projects/Secret Message.png";
-import webcrawlerlogo from "../../../public/images/projects/webcrawlerlogo.jpg";
+import secretMessagelogo from "../../public/images/projects/Secret Message.png";
+import webcrawlerlogo from "../../public/images/projects/webcrawlerlogo.jpg";
 
 function SecondaryInfo() {
   return (
@@ -209,4 +209,5 @@ function SecondaryInfo() {
       </InfoSection>
     </div>
   );
-} export default SecondaryInfo;
+}
+export default SecondaryInfo;

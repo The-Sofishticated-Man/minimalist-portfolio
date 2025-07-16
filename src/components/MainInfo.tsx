@@ -1,5 +1,5 @@
 import Image from "next/image";
-import pfp from "../../../public/images/pfp.png";
+import pfp from "../../public/images/pfp.png";
 import AddaMessageForTheNextPersonButton from "./AddaMessageForTheNextPersonButton";
 import MessageContainer from "./MessageContainer";
 
@@ -22,7 +22,7 @@ export default function MainInfo() {
         &quot;Code is like humor. When you have to explain it, it’s bad.&quot; –
         Cory House
       </p>
-      <div className="mt-6">
+      <div className="my-6">
         <div className="flex space-x-3 items-center">
           <a
             href="#"
@@ -97,7 +97,6 @@ export default function MainInfo() {
           </a>
         </div>
       </div>
-      <h2 className="text-2xl my-4 font-bold">Want to Work Together?</h2>
       <AddaMessageForTheNextPersonButton />
       <MessageContainer />
     </div>
