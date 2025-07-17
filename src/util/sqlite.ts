@@ -10,7 +10,11 @@ db.exec(`
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         text TEXT NOT NULL,
         date DATETIME DEFAULT CURRENT_TIMESTAMP
-    )
+    );
+    CREATE TABLE IF NOT EXISTS banned_ips (
+        ip TEXT PRIMARY KEY,
+        date DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
 `);
 
 // Insert some initial mock data if table is empty
@@ -19,9 +23,7 @@ const messageCount = db
   .get() as { count: number };
 
 if (messageCount.count === 0) {
-  const insertMessage = db.prepare(
-    "INSERT INTO messages (text) VALUES (?)"
-  );
+  const insertMessage = db.prepare("INSERT INTO messages (text) VALUES (?)");
 
   const mockMessages = [
     "Welcome to the site! Hope you have a great day.",

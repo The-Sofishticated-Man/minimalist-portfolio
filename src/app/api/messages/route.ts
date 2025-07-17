@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import db from "@/util/sqlite";
+import { getCurrentUserIp, banUserByIp } from "@/util/banned";
 
 // todo : seperate this to a shared type file if it grows
 interface Message {
@@ -42,6 +43,13 @@ export async function POST(request: NextRequest) {
     const newMessage = db
       .prepare("SELECT * FROM messages WHERE id = ?")
       .get(result.lastInsertRowid) as Message;
+
+    // Ban the user's IP after they send a message
+    const userIp = getCurrentUserIp(request);
+    banUserByIp(userIp);
+    console.log(
+      `User with IP ${userIp} has been banned after sending message: "${text.trim()}"`
+    );
 
     return NextResponse.json(newMessage, { status: 201 });
   } catch (error) {

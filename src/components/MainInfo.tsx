@@ -1,9 +1,9 @@
 import Image from "next/image";
 import pfp from "../../public/images/pfp.png";
-import AddaMessageForTheNextPersonButton from "./AddaMessageForTheNextPersonButton";
-import MessageContainer from "./MessageContainer";
+import CommentSection from "./CommentSection";
 
-export default function MainInfo() {
+export default async function MainInfo() {
+  
   return (
     <div id="crucial" className="flex-1/3 px-25 py-15 ">
       <Image
@@ -17,7 +17,7 @@ export default function MainInfo() {
       <h2 className="text-xl text-gray-400 mb-4">
         Fullstack Web Developer | AI & Machine Learning
       </h2>
-      <h3 className="text-lg text-gray-400 mb-4"> 📍 Algiers, Algeria 🇩🇿 </h3>
+      <h3 className="text-lg text-gray-400 mb-4">📍 Algiers, Algeria 🇩🇿 </h3>
       <p>
         &quot;Code is like humor. When you have to explain it, it’s bad.&quot; –
         Cory House
@@ -97,8 +97,7 @@ export default function MainInfo() {
           </a>
         </div>
       </div>
-      <AddaMessageForTheNextPersonButton />
-      <MessageContainer />
+      <CommentSection/>
     </div>
   );
 }
