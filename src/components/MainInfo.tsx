@@ -1,6 +1,5 @@
 import Image from "next/image";
 import pfp from "../../public/images/pfp.png";
-import CommentSection from "./CommentSection";
 
 export default async function MainInfo() {
   
@@ -97,7 +96,6 @@ export default async function MainInfo() {
           </a>
         </div>
       </div>
-      <CommentSection/>
     </div>
   );
 }
