@@ -33,8 +33,8 @@ function CommentContainer({ showAddButton }: CommentContainerProps) {
       {showAddButton && (
         <AddaCommentForTheNextPersonButton saveComment={saveComment} />
       )}
-      <div className="flex items-center py-5 overflow-scroll">
-        <div className="max-w-md space-y-4">
+      <div className="flex items-center py-5">
+        <div className="max-w-md w-full p-5 h-96 overflow-y-auto space-y-4 bg-transparent">
           {comments.length === 0 ? (
             <p className="text-gray-400">
               No comments yet. Be the first to leave one!
