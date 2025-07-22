@@ -1,4 +1,5 @@
 {
+  "homepage": "https://thesofishticatedman.github.io/minimalist-portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -7,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
-    "deploy": "npm run build && npm run export && gh-pages -d out"
+    "deploy": "npm run build && gh-pages -d out"
   },
   "dependencies": {
     "@types/better-sqlite3": "^7.6.13",
