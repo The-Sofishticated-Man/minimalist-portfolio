@@ -2,7 +2,6 @@ import Image from "next/image";
 import pfp from "../../public/images/pfp.png";
 
 export default async function MainInfo() {
-  
   return (
     <div id="crucial" className="flex-1/3 px-25 py-15 ">
       <Image
@@ -24,8 +23,10 @@ export default async function MainInfo() {
       <div className="my-6">
         <div className="flex space-x-3 items-center">
           <a
-            href="#"
-            download=""
+            href="/documents/islam lameche resume.pdf"
+            download="Islam_Lameche_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center bg-[#111111] hover:bg-white text-white hover:text-[#111111] px-3 py-1 rounded transition duration-300 mr-4 border border-white"
           >
             <svg
