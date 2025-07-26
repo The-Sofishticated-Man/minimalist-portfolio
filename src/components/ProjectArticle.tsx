@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import SkillList from "./SkillList";
+
 function ProjectArticle({
   title,
   img,
@@ -19,26 +20,36 @@ function ProjectArticle({
   };
 }) {
   return (
-    <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gray-600 mb-10">
-      <div className="flex flex-col md:flex-row items-start mb-3">
-        <div className="bg-white rounded-lg aspect-square mr-4 w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
-          <Image src={img} alt={`${title} logo`} />
+    <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 mb-2 group">
+      {/* Timeline indicator */}
+      <div className="absolute -left-4 top-8 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full border-4 border-gray-900"></div>
+
+      <div className="flex flex-col md:flex-row items-start mb-6">
+        <div className="relative mr-6 mb-4 md:mb-0 group-hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-xl blur"></div>
+          <div className="relative bg-white rounded-xl p-3 w-24 h-24 flex items-center justify-center overflow-hidden shadow-lg">
+            <Image src={img} alt={`${title} logo`} className="object-contain" />
+          </div>
         </div>
-        <div>
-          <h3 className="text-2xl font-semibold text-gray-100 mb-0.5">
+
+        <div className="flex-grow">
+          <h3 className="text-2xl font-semibold text-white mb-2 group-hover:text-purple-100 transition-colors duration-300">
             {title}
           </h3>
-          <p className="text-gray-400">{description}</p>
-          <div className="mt-2">
+          <p className="text-gray-300 leading-relaxed mb-4 group-hover:text-gray-200 transition-colors duration-300">
+            {description}
+          </p>
+
+          <div className="flex flex-wrap gap-3">
             {github && (
               <a
                 href={github}
-                className="inline-flex items-center mr-4 text-blue-400 hover:underline"
+                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white rounded-lg border border-gray-600 transition-all duration-300 hover:scale-105 text-sm font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <svg
-                  className="w-5 h-5 mr-1"
+                  className="w-4 h-4 mr-2"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -51,12 +62,12 @@ function ProjectArticle({
             {demo && (
               <a
                 href={demo}
-                className="inline-flex items-center text-green-400 hover:underline"
+                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white rounded-lg border border-green-500 transition-all duration-300 hover:scale-105 text-sm font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <svg
-                  className="w-5 h-5 mr-1"
+                  className="w-4 h-4 mr-2"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   aria-hidden="true"
@@ -69,15 +80,30 @@ function ProjectArticle({
           </div>
         </div>
       </div>
-      <ul className=" space-y-2 text-gray-300 mb-4">
-        {achievements.map((achievement, index) => (
-          <li key={index} className="flex items-start">
-            <span className="mr-2 mt-1.5 text-gray-500">•</span>
-            <span>{achievement}</span>
-          </li>
-        ))}
-      </ul>
-      <SkillList skills={technologies} color="blue" />
+
+      <div className="mb-6">
+        <h5 className="text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
+          Key Features
+        </h5>
+        <ul className="space-y-3">
+          {achievements.map((achievement, index) => (
+            <li
+              key={index}
+              className="flex items-start text-gray-300 group-hover:text-gray-200 transition-colors duration-300"
+            >
+              <div className="mr-3 mt-2 w-1.5 h-1.5 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex-shrink-0"></div>
+              <span className="leading-relaxed">{achievement}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h5 className="text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">
+          Technologies
+        </h5>
+        <SkillList skills={technologies} color="purple" />
+      </div>
     </div>
   );
 }
