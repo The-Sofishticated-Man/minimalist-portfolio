@@ -32,10 +32,10 @@ function SkillArticle({
 
   return (
     <div
-      className={`border-l-2 ${borderClass} pl-6 py-4 transition-all duration-300 hover:border-opacity-60 group`}
+      className={`border-l-2 ${borderClass} pl-3 sm:pl-4 md:pl-5 lg:pl-6 py-2 sm:py-3 lg:py-4 transition-all duration-300 hover:border-opacity-60 group`}
     >
       <h4
-        className={`text-lg font-medium mb-3 ${titleColor} capitalize group-hover:text-white transition-colors duration-300`}
+        className={`text-sm sm:text-base lg:text-lg font-medium mb-2 lg:mb-3 ${titleColor} capitalize group-hover:text-white transition-colors duration-300`}
       >
         {title}
       </h4>

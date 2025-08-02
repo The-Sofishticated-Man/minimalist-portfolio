@@ -19,7 +19,7 @@ function SkillBadge({
 }) {
   return (
     <span
-      className={`inline-block px-3 py-2 text-sm font-medium mr-2 mb-3 rounded-full border backdrop-blur-sm transition-all duration-300 hover:scale-105 cursor-default ${
+      className={`inline-block px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm font-medium mr-1 sm:mr-2 mb-2 sm:mb-3 rounded-full border backdrop-blur-sm transition-all duration-300 hover:scale-105 cursor-default ${
         color ? colorMap[color] : colorMap.grey
       }`}
     >
