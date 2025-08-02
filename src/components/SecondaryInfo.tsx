@@ -17,7 +17,7 @@ function SecondaryInfo() {
   return (
     <div
       id="info"
-      className="flex-2/5 py-15 px-10 overflow-scroll relative bg-gradient-to-b from-gray-900/50 to-black/50"
+      className="w-full xl:flex-1/5 xl:max-h-screen xl:overflow-scroll relative bg-gradient-to-b from-gray-900/50 to-black/50 px-4 sm:px-6 lg:px-8 xl:px-10 py-6 lg:py-8 xl:py-15"
     >
       {/* Floating background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
