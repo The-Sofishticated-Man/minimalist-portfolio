@@ -13,6 +13,8 @@
 
 **Minimalist Portfolio**: clean, distraction-free personal website built with [Next.js](https://nextjs.org/) and deployed via [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/features/actions).
 
+![Portfolio Preview](./preview.png)
+
 It serves as a professional portfolio to highlight your:
 
 - 🧠 Experience  
