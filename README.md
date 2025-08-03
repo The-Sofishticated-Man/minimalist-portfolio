@@ -1,6 +1,6 @@
 # Minimalist Portfolio
 
-[![GitHub Pages](https://img.shields.io/github/deployments/The-Sofishticated-Man/The-Sofishticated-Man.github.io/github-pages?label=github%20pages&logo=github)](https://The-Sofishticated-Man.me)
+[![GitHub Pages](https://img.shields.io/github/deployments/The-Sofishticated-Man/The-Sofishticated-Man.github.io/github-pages?label=github%20pages&logo=github)](https://thesofishticatedman.me)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/The-Sofishticated-Man/The-Sofishticated-Man.github.io?logo=git)](https://github.com/The-Sofishticated-Man/The-Sofishticated-Man.github.io/commits/main)
 [![Next.js](https://img.shields.io/badge/built%20with-Next.js-000?logo=next.js)](https://nextjs.org/)
