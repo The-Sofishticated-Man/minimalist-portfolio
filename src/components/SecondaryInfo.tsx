@@ -12,6 +12,7 @@ import ghardaiauniverstylogo from "../../public/images/entities/ghardaiauniversi
 
 import secretMessagelogo from "../../public/images/projects/Secret Message.png";
 import webcrawlerlogo from "../../public/images/projects/webcrawlerlogo.jpg";
+import steamshelflogo from "../../public/images/projects/steamshelflogo.png";
 
 function SecondaryInfo() {
   return (
@@ -192,6 +193,30 @@ function SecondaryInfo() {
 
       <div>
         <InfoSection title="Projects" id="projects">
+          <ProjectArticle
+            title="Steam Shelf"
+            description="A tool that automates the process of adding collections of games to your Steam library as non-steam games, with automatic artwork curation"
+            img={steamshelflogo}
+            achievements={[
+              "Batch Import: Developed a system to scan directories and add all discovered games to Steam in one click, saving hours of manual work.",
+              "Automatic Artwork Curation: Implemented intelligent artwork fetching that automatically downloads high-quality official artwork (Portrait, Hero, Logo, and Capsule) for each game.",
+              "Smart Game Matching: Created an algorithm that uses folder names to intelligently find the correct corresponding Steam game for accurate artwork matching.",
+              "Dual Interface Design: Built both GUI (Tkinter) and CLI versions to cater to different user preferences and automation needs.",
+              "Standalone Distribution: Packaged as a standalone executable requiring no installation, making it accessible to users without Python knowledge.",
+            ]}
+            technologies={[
+              "Python",
+              "Tkinter",
+              "Reverse Engineering",
+              "Web Scraping",
+              "Automation",
+              "CLI Development",
+              "GUI Development",
+            ]}
+            links={{
+              github: "https://github.com/the-sofishticated-man/steam-shelf",
+            }}
+          />
           <ProjectArticle
             title="Secret Message"
             description="An anonymous messaging app to get feedback or just have fun"
