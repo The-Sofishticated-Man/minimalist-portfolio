@@ -22,11 +22,11 @@ function ProjectArticle({
   return (
     <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 mb-3 sm:mb-4 lg:mb-2 group">
       {/* Timeline indicator */}
-      <div className="absolute -left-1.5 sm:-left-2 md:-left-3 lg:-left-4 top-4 sm:top-5 md:top-6 lg:top-6 xl:top-8 w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full border-2 sm:border-2 md:border-3 lg:border-4 border-gray-900"></div>
+      <div className="absolute -left-1.5 sm:-left-2 md:-left-3 lg:-left-4 top-4 sm:top-5 md:top-6 lg:top-6 xl:top-8 w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 bg-purple-400 rounded-full border-2 sm:border-2 md:border-3 lg:border-4 border-gray-900"></div>
 
       <div className="flex flex-col md:flex-row md:items-start mb-3 sm:mb-4 md:mb-5 lg:mb-6">
         <div className="relative mb-3 sm:mb-4 md:mb-0 md:mr-3 lg:mr-4 xl:mr-6 group-hover:scale-105 transition-transform duration-300 self-center md:self-start">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-xl blur"></div>
+          <div className="absolute inset-0 bg-purple-500/10 rounded-xl blur"></div>
           <div className="relative bg-white rounded-xl p-1.5 sm:p-2 md:p-2.5 lg:p-3 w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 lg:w-22 lg:h-22 xl:w-24 xl:h-24 flex items-center justify-center overflow-hidden shadow-lg">
             <Image src={img} alt={`${title} logo`} className="object-contain" />
           </div>
@@ -44,7 +44,7 @@ function ProjectArticle({
             {github && (
               <a
                 href={github}
-                className="inline-flex items-center justify-center sm:justify-start px-3 sm:px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white rounded-lg border border-gray-600 transition-all duration-300 hover:scale-105 text-xs sm:text-sm font-medium"
+                className="inline-flex items-center justify-center sm:justify-start px-3 sm:px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg border border-gray-600 transition-all duration-300 hover:scale-105 text-xs sm:text-sm font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -62,7 +62,7 @@ function ProjectArticle({
             {demo && (
               <a
                 href={demo}
-                className="inline-flex items-center justify-center sm:justify-start px-3 sm:px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white rounded-lg border border-green-500 transition-all duration-300 hover:scale-105 text-xs sm:text-sm font-medium"
+                className="inline-flex items-center justify-center sm:justify-start px-3 sm:px-4 py-2 bg-green-600 hover:bg-green-500 text-white rounded-lg border border-green-500 transition-all duration-300 hover:scale-105 text-xs sm:text-sm font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -91,7 +91,7 @@ function ProjectArticle({
               key={index}
               className="flex items-start text-gray-300 group-hover:text-gray-200 transition-colors duration-300"
             >
-              <div className="mr-2 lg:mr-3 mt-1.5 lg:mt-2 w-1 h-1 lg:w-1.5 lg:h-1.5 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex-shrink-0"></div>
+              <div className="mr-2 lg:mr-3 mt-1.5 lg:mt-2 w-1 h-1 lg:w-1.5 lg:h-1.5 bg-purple-400 rounded-full flex-shrink-0"></div>
               <span className="leading-relaxed text-sm sm:text-base">
                 {achievement}
               </span>

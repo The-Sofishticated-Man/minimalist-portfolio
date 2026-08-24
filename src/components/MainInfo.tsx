@@ -78,7 +78,7 @@ export default function MainInfo() {
   return (
     <div
       id="crucial"
-      className="w-full xl:flex-1 min-h-screen xl:h-[90vh] bg-gradient-to-br from-gray-900 to-black text-white flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 xl:px-8 py-8 lg:py-12 xl:py-16"
+      className="w-full xl:flex-1 min-h-screen xl:h-[90vh] bg-black text-white flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 xl:px-8 py-8 lg:py-12 xl:py-16"
     >
       <div className="text-center max-w-4xl w-full">
         {/* Profile Image with GSAP animations */}
