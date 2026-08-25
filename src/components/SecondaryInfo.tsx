@@ -20,48 +20,33 @@ function SecondaryInfo() {
       id="info"
       className="w-full xl:flex-1/5 xl:max-h-screen xl:overflow-scroll relative bg-black/50 px-4 sm:px-6 lg:px-8 xl:px-10 py-6 lg:py-8 xl:py-15"
     >
-      {/* Floating background elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-indigo-600/10 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-            }}
-          />
-        ))}
-      </div>
-
       <div>
         <InfoSection title="About me" id="about">
           <p className="text-gray-300 mb-4">
             {" "}
-            Hi, I’m Lameche Islam, a final-year Computer Science student with a
+            Hi, I’m Lameche Islam, a <strong>Full-Stack engineer </strong>with a
             strong passion for programming and problem-solving.
           </p>
           <p className="text-gray-300 mb-4">
             {" "}
-            My journey began with game development — discovering Unity sparked
-            my interest, and I quickly picked up C# to start building. That
-            curiosity grew into a deep love for computer science.
+            It started with Unity when I was 11 — I wanted to make games, so I
+            taught myself <strong>C#</strong> to do it. That kinda snowballed
+            into an autistic interest in everything computer science related,
+            and I never really stopped.
           </p>
           <p className="text-gray-300 mb-4">
             {" "}
-            In my first year, I was honored to be named valedictorian of a class
-            of 250 students. I&apos;m also proud to serve as the GDG Ghardaia
-            Dev Team Leader, where I collaborate with other developers to lead
-            projects, share knowledge, and grow our local tech community.
+            I graduated <strong>valedictorian</strong> with a bachelor&apos;s in{" "}
+            <strong>computer systems</strong>, I also lead the local{" "}
+            <strong> Google Developer Groups </strong>Development Team, where I
+            worked with other developers on projects and help grow the local
+            tech scene.
           </p>
           <p className="text-gray-300 mb-4">
             {" "}
-            I’m especially interested in artificial intelligence, game
-            development, systems design, and exploring emerging technologies.
-            Right now, I’m focused on honing my skills and creating projects
-            that showcase my creativity and technical abilities.
+            I’m especially interested in <strong>game development</strong>,{" "}
+            <strong>machine learning</strong>, <strong>systems design</strong>,
+            and exploring emerging technologies.
           </p>
         </InfoSection>
       </div>
