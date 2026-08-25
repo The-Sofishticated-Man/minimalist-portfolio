@@ -28,7 +28,7 @@ export default function MainInfo() {
         duration: 1,
         ease: "back.out(1.7)",
         delay: 0.5,
-      }
+      },
     );
 
     // Floating animation
@@ -105,7 +105,7 @@ export default function MainInfo() {
 
         {/* Subtitle */}
         <h2 className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl text-gray-400 mb-4 lg:mb-6 px-2">
-          Fullstack Developer
+          Full-Stack Engineer
         </h2>
 
         {/* Location */}
