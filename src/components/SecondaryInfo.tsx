@@ -56,40 +56,48 @@ function SecondaryInfo() {
           <SkillArticle
             title="Languages"
             color="blue"
-            skills={[
-              "HTML",
-              "CSS",
-              "JavaScript",
-              "TypeScript",
-              "Python",
-              "PHP",
-              "Java",
-              "C++",
-            ]}
+            skills={["Python", "TypeScript", "HTML", "CSS", "Java"]}
           />
           <SkillArticle
             title="Frameworks"
             color="green"
             skills={[
-              "React",
-              "Next",
-              "Vue",
-              "Bootstrap",
-              "Tailwind",
-              "Express",
-              "Redux",
-              "Three.js",
+              [
+                "React",
+                "Next",
+                "Vue",
+                "Tailwind",
+                "Express",
+                "Redux",
+                "Three.js",
+              ],
+              [
+                "FastAPI",
+                "Django",
+                "Selenium",
+                "Tkinter",
+                "Pytest",
+                "Scikit-Learn",
+              ],
             ]}
           />
           <SkillArticle
             title="Data Managemnt"
             color="red"
-            skills={["SQL", "PostgreSQL", "MongoDB", "SQLite", "Redis"]}
+            skills={["PostgreSQL", "MongoDB", "SQLite", "Redis"]}
           />
           <SkillArticle
             title="Tools"
             color="yellow"
-            skills={["Git", "GitHub", "Docker", "Vim", "Jest", "Vite"]}
+            skills={[
+              "Git",
+              "Docker",
+              "linux",
+              "AWS",
+              "GitHub Actions",
+              "Jest",
+              "DataDog",
+            ]}
           />
         </InfoSection>
       </div>
