@@ -13,39 +13,6 @@ const colorMap: Record<string, string> = {
   grey: "bg-gray-500/30 text-gray-300 border-gray-400/50 hover:bg-gray-500/40 hover:text-gray-200",
 };
 
-const skillIconMap: Record<string, string> = {
-  python: "python.svg",
-  typescript: "typescript.svg",
-  html: "html.svg",
-  css: "css.svg",
-  java: "java.svg",
-  react: "react.svg",
-  next: "nextjs.svg",
-  nextjs: "nextjs.svg",
-  vue: "vuejs.svg",
-  tailwind: "tailwind-css.svg",
-  express: "expressjs.svg",
-  redux: "redux.svg",
-  threejs: "threejs.svg",
-  fastapi: "fastapi.svg",
-  django: "django.svg",
-  selenium: "selenium.svg",
-  pyqt: "pyqt.png",
-  pytest: "pytest.svg",
-  scikitlearn: "scikitlearn.svg",
-  mongodb: "mongodb.svg",
-  sqlite: "sqlite.svg",
-  redis: "redis.svg",
-  git: "git.svg",
-  linux: "linux.svg",
-  aws: "aws.svg",
-  githubactions: "githubactions.svg",
-  jest: "jest.svg",
-  datadog: "datadog.svg",
-  docker: "docker.svg",
-  postgresql: "postgresql.svg",
-};
-
 const normalizeSkillName = (value: string) =>
   value.toLowerCase().replace(/[^a-z0-9]+/g, "");
 
@@ -57,7 +24,7 @@ function SkillBadge({
   color?: "blue" | "red" | "green" | "yellow" | "purple" | "grey";
 }) {
   const normalizedSkill = normalizeSkillName(skill);
-  const mappedIconName = skillIconMap[normalizedSkill];
+  const mappedIconName = normalizedSkill + ".svg";
   const shouldUseIcon = useSkillsIcons();
 
   return (
