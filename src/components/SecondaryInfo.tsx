@@ -3,9 +3,9 @@
 import ExperienceArticle from "./ExperienceArticle";
 import InfoSection from "./InfoSection";
 import SkillArticle from "./SkillArticle";
+import { SkillsIconsProvider } from "../context/SkillsIconsContext";
 import EducationArticle from "./EducationArticle";
 import ProjectArticle from "./ProjectArticle";
-
 import gdglogo from "../../public/images/entities/gdglogo.webp";
 import erinovlogo from "../../public/images/entities/erinovlogo.jpg";
 import ghardaiauniverstylogo from "../../public/images/entities/ghardaiauniversitylogo.webp";
@@ -31,7 +31,7 @@ function SecondaryInfo() {
             {" "}
             It started with Unity when I was 11 — I wanted to make games, so I
             taught myself <strong>C#</strong> to do it. That kinda snowballed
-            into an autistic interest in everything computer science related,
+            into an autistic interest in everything computer-science related,
             and I never really stopped.
           </p>
           <p className="text-gray-300 mb-4">
@@ -52,54 +52,57 @@ function SecondaryInfo() {
       </div>
 
       <div>
-        <InfoSection title="Skills" id="skills">
-          <SkillArticle
-            title="Languages"
-            color="blue"
-            skills={["Python", "TypeScript", "HTML", "CSS", "Java"]}
-          />
-          <SkillArticle
-            title="Frameworks"
-            color="green"
-            skills={[
-              [
-                "React",
-                "Next",
-                "Vue",
-                "Tailwind",
-                "Express",
-                "Redux",
-                "Three.js",
-              ],
-              [
-                "FastAPI",
-                "Django",
-                "Selenium",
-                "Tkinter",
-                "Pytest",
-                "Scikit-Learn",
-              ],
-            ]}
-          />
-          <SkillArticle
-            title="Data Managemnt"
-            color="red"
-            skills={["PostgreSQL", "MongoDB", "SQLite", "Redis"]}
-          />
-          <SkillArticle
-            title="Tools"
-            color="yellow"
-            skills={[
-              "Git",
-              "Docker",
-              "linux",
-              "AWS",
-              "GitHub Actions",
-              "Jest",
-              "DataDog",
-            ]}
-          />
-        </InfoSection>
+        {/* provides a boolean for showing skill icons */}
+        <SkillsIconsProvider>
+          <InfoSection title="Skills" id="skills">
+            <SkillArticle
+              title="Languages"
+              color="blue"
+              skills={["Python", "TypeScript", "HTML", "CSS", "Java"]}
+            />
+            <SkillArticle
+              title="Frameworks"
+              color="green"
+              skills={[
+                [
+                  "React",
+                  "Next",
+                  "Vue",
+                  "Tailwind",
+                  "Express",
+                  "Redux",
+                  "Three.js",
+                ],
+                [
+                  "FastAPI",
+                  "Django",
+                  "Selenium",
+                  "PyQt",
+                  "Pytest",
+                  "Scikit-Learn",
+                ],
+              ]}
+            />
+            <SkillArticle
+              title="Data Managemnt"
+              color="red"
+              skills={["PostgreSQL", "MongoDB", "SQLite", "Redis"]}
+            />
+            <SkillArticle
+              title="Tools"
+              color="yellow"
+              skills={[
+                "Git",
+                "Docker",
+                "linux",
+                "AWS",
+                "GitHub Actions",
+                "Jest",
+                "DataDog",
+              ]}
+            />
+          </InfoSection>
+        </SkillsIconsProvider>
       </div>
 
       <div>

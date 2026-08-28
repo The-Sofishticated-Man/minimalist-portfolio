@@ -32,7 +32,6 @@ function SkillArticle({ skills, color, title }: SkillArticleProps) {
   const normalizedSkills: string[][] = Array.isArray(skills[0])
     ? (skills as string[][])
     : [skills as string[]];
-
   return (
     <div
       className={`border-l-2 ${borderClass} pl-3 sm:pl-4 md:pl-5 lg:pl-6 py-2 sm:py-3 lg:py-4 transition-all duration-300 hover:border-opacity-60 group`}
