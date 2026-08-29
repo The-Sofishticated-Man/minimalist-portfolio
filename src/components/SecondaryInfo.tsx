@@ -10,9 +10,10 @@ import gdglogo from "../../public/images/entities/gdglogo.webp";
 import erinovlogo from "../../public/images/entities/erinovlogo.jpg";
 import ghardaiauniverstylogo from "../../public/images/entities/ghardaiauniversitylogo.webp";
 
-import secretMessagelogo from "../../public/images/projects/Secret Message.png";
-import webcrawlerlogo from "../../public/images/projects/webcrawlerlogo.jpg";
-import steamshelflogo from "../../public/images/projects/steamshelflogo.png";
+import secretMessageLogo from "../../public/images/projects/secretMessageLogo.png";
+import webCrawlerLogo from "../../public/images/projects/webCrawlerLogo.jpg";
+import steamShelfLogo from "../../public/images/projects/steamShelfLogo.png";
+import lecheeeeckersLogo from "../../public/images/projects/lecheeeeckersLogo.png";
 
 function SecondaryInfo() {
   return (
@@ -114,21 +115,20 @@ function SecondaryInfo() {
             img={gdglogo}
             achievements={[
               "Led a team of 8 developers to deliver 5+ community-driven tech projects and workshops.",
-              "Organized and facilitated 12+ meetups focused on React, TypeScript, and modern web development.",
-              "Mentored 10+ junior developers in JavaScript, TypeScript, and Git workflows.",
+              "Mentored 10+ junior developers in TypeScript and Git workflows.",
               "Collaborated with 4 cross-functional teams to build 3 open-source tools using React, Next.js, and Node.js.",
-              "Promoted best practices in code quality, testing (Jest), and CI/CD pipelines with GitHub Actions, resulting in a 30% reduction in deployment errors.",
+              "Promoted best practices in code quality, testing (Jest), and CI/CD pipelines with GitHub Actions, reducing failed deployments by 30%.",
             ]}
             skills={[
               "React",
               "Next.js",
               "TypeScript",
-              "JavaScript",
               "Node.js",
               "Git",
               "GitHub Actions",
               "Jest",
               "CI/CD",
+              "Test-Driven Development",
               "Mentorship",
               "Team Leadership",
             ]}
@@ -140,24 +140,25 @@ function SecondaryInfo() {
             img={erinovlogo}
             achievements={[
               "Delivered comprehensive instruction to a class of 30 participants on the fundamentals of web development, including HTML, CSS, and JavaScript, and PHP.",
-              "Designed and implemented a QR code-based card scanning system to streamline event check-ins and participant management.",
-              "Mentored junior developers and contributed to a collaborative, growth-oriented team environment.",
+              "Designed a QR code scanning system in Python to streamline event check-ins and participant management.",
+              "Successfully deployed a student registration system using Docker and AWS, streamlining enrollment and administrative data management.",
             ]}
             skills={[
               "HTML",
               "CSS",
               "JavaScript",
               "PHP",
-              "C++",
-              "Git",
-              "QR Code Systems",
+              "Python",
               "Web Development",
               "Teaching",
+              "Docker",
+              "AWS",
+              "CI/CD",
+              "Cloud Computing",
             ]}
           />
         </InfoSection>
       </div>
-
       <div>
         <InfoSection title="Education" id="education">
           <EducationArticle
@@ -190,24 +191,50 @@ function SecondaryInfo() {
       <div>
         <InfoSection title="Projects" id="projects">
           <ProjectArticle
+            title="lecheeeeckers"
+            description="Real-time 4-player checkers multiplayer Web Game with a shared, authoritative game engine"
+            img={lecheeeeckersLogo}
+            features={[
+              "Deterministic Engine: Designed a shared, deterministic game engine (rules, move validation, captures, and execution core) used by both client and server to guarantee consistent game state and prevent desyncs or cheating.",
+              "Real-Time Networking: Built robust server-side handlers via WebSockets for rooms, moves, chat, and sandboxed scenarios; implemented authoritative server state and client synchronisation for reliability under network variability.",
+              "Developer Tooling & Debugging: Created a sandbox and dev tools to simulate game flows, test edge cases, and reproduce lifecycle scenarios for faster debugging and QA.",
+              "Reliability & Validation: Implemented comprehensive validation and lifecycle logic (timeouts/forfeits, capture rules, perimeter/geometry checks) to enforce game integrity and edge-case handling.",
+              "Deployment & DevOps: Dockerized the application with a Docker Compose setup for reproducible local development and simplified deployment workflows.",
+            ]}
+            technologies={[
+              "WebSockets",
+              "Node.js",
+              "Docker",
+              "Docker Compose",
+              "Real-Time Systems",
+              "Game Development",
+              "System Design",
+            ]}
+            links={{
+              github:
+                "https://github.com/the-sofishticated-man/4-player-checkers",
+            }}
+          />{" "}
+          <ProjectArticle
             title="Steam Shelf"
-            description="A tool that automates the process of adding collections of games to your Steam library as non-steam games, with automatic artwork curation"
-            img={steamshelflogo}
-            achievements={[
-              "Batch Import: Developed a system to scan directories and add all discovered games to Steam in one click, saving hours of manual work.",
-              "Automatic Artwork Curation: Implemented intelligent artwork fetching that automatically downloads high-quality official artwork (Portrait, Hero, Logo, and Capsule) for each game.",
-              "Smart Game Matching: Created an algorithm that uses folder names to intelligently find the correct corresponding Steam game for accurate artwork matching.",
-              "Dual Interface Design: Built both GUI (Tkinter) and CLI versions to cater to different user preferences and automation needs.",
-              "Standalone Distribution: Packaged as a standalone executable requiring no installation, making it accessible to users without Python knowledge.",
+            description="Python-based Automation & Metadata Tool that automates adding collections of games to your Steam library as non-Steam games, with automatic artwork curation"
+            img={steamShelfLogo}
+            features={[
+              "Algorithm Development: Engineered a smart-matching algorithm to cross-reference local directory structures with remote metadata APIs for accurate game identification.",
+              "Reverse Engineering: Reverse-engineered Steam's VDF (Valve Data Format) structure to parse, modify, and write Steam library metadata, enabling automated management of non-Steam game entries.",
+              "Automated Curation: Orchestrated a multi-threaded system to autonomously fetch and map graphical assets to the Steam client.",
+              "Interface Design: Architected both a GUI (PyQt) and a CLI to accommodate diverse user workflows.",
+              "Software Distribution: Successfully managed the end-to-end deployment of the tool as a standalone executable, ensuring accessibility for non-technical users.",
             ]}
             technologies={[
               "Python",
-              "Tkinter",
+              "PyQt",
               "Reverse Engineering",
               "Web Scraping",
               "Automation",
               "CLI Development",
               "GUI Development",
+              "Multi-threading",
             ]}
             links={{
               github: "https://github.com/the-sofishticated-man/steam-shelf",
@@ -215,12 +242,12 @@ function SecondaryInfo() {
           />
           <ProjectArticle
             title="Secret Message"
-            description="An anonymous messaging app to get feedback or just have fun"
-            img={secretMessagelogo}
-            achievements={[
-              "JWT Authentication from Scratch: Secure login system using Web Tokens (JWT), supports both Access Tokens and Refresh Tokens, with token rotation and expiration handling.",
-              "Full-Stack Data Sanitisation: Backend protects against injection attacks with input validation and sanitisation; frontend cleans user input to prevent XSS and other client-side vulnerabilities.",
-              "Fast Routing & Data Fetching: Efficient navigation with React Router v6+ and seamless async data fetching using React Query, including built-in caching, background updates, and revalidation.",
+            description="MERN Full-Stack Application — an anonymous messaging app to get feedback or just have fun"
+            img={secretMessageLogo}
+            features={[
+              "Security & Authentication: Implemented a robust security layer utilising JWT, featuring dual-token authorisation logic.",
+              "State Management & Optimisation: Leveraged React Query for sophisticated data synchronisation, including background revalidation, caching, and state persistence.",
+              "Full-Stack Development: Architected a scalable, responsive app using React and Node.js with a focus on cross-platform performance.",
               "Responsive Design: Fully responsive layout optimised for mobile, tablet, and desktop using flexible UI components and modern CSS practices.",
             ]}
             technologies={[
@@ -242,8 +269,8 @@ function SecondaryInfo() {
           <ProjectArticle
             title="Snapchat Webcrawler"
             description="An app built using Python and Selenium that provides a wrapper API for sending and reading messages"
-            img={webcrawlerlogo}
-            achievements={[
+            img={webCrawlerLogo}
+            features={[
               "Automated Login: Developed a system to log in to Snapchat accounts autonomously using Selenium.",
               "Message Handling: Created a API wrapper to send and read messages programmatically.",
               "Web Automation: Leveraged Selenium for efficient web interaction and data extraction.",
@@ -258,7 +285,7 @@ function SecondaryInfo() {
             ]}
             links={{
               github:
-                "https://github.com/the-sofishticated-man/snapchat-webcrawler", // Replace with the actual GitHub link if available
+                "https://github.com/the-sofishticated-man/snapchat-webcrawler",
             }}
           />
         </InfoSection>

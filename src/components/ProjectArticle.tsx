@@ -6,14 +6,14 @@ function ProjectArticle({
   img,
   technologies,
   description,
-  achievements,
+  features,
   links: { github, demo },
 }: {
   title: string;
   img: string | StaticImageData;
   technologies: string[];
   description: string;
-  achievements: string[];
+  features: string[];
   links: {
     github?: string;
     demo?: string;
@@ -86,17 +86,22 @@ function ProjectArticle({
           Key Features
         </h5>
         <ul className="space-y-2 lg:space-y-3">
-          {achievements.map((achievement, index) => (
-            <li
-              key={index}
-              className="flex items-start text-gray-300 group-hover:text-gray-200 transition-colors duration-300"
-            >
-              <div className="mr-2 lg:mr-3 mt-1.5 lg:mt-2 w-1 h-1 lg:w-1.5 lg:h-1.5 bg-purple-400 rounded-full flex-shrink-0"></div>
-              <span className="leading-relaxed text-sm sm:text-base">
-                {achievement}
-              </span>
-            </li>
-          ))}
+          {features.map((feature, index) => {
+            const [title, ...description] = feature.split(":");
+
+            return (
+              <li
+                key={index}
+                className="flex items-start text-gray-300 group-hover:text-gray-200 transition-colors duration-300"
+              >
+                <div className="mr-2 lg:mr-3 mt-1.5 lg:mt-2 w-1 h-1 lg:w-1.5 lg:h-1.5 bg-purple-400 rounded-full flex-shrink-0" />
+
+                <span className="leading-relaxed text-sm sm:text-base">
+                  <strong>{title}:</strong> {description.join(":").trim()}
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </div>
 
