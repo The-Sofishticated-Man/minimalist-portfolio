@@ -1,5 +1,6 @@
 "use client";
 import { useSkillsIcons } from "../context/SkillsIconsContext";
+import Image from "next/image";
 
 const colorMap: Record<string, string> = {
   blue: "bg-blue-500/30 text-blue-300 border-blue-400/50 hover:bg-blue-500/40 hover:text-blue-200",
@@ -35,10 +36,12 @@ function SkillBadge({
     >
       {shouldUseIcon && (
         <span className="w- h-6 sm:w-8 sm:h-8 flex items-center justify-center ">
-          <img
+          <Image
             src={`/images/icons/${mappedIconName}`}
             alt={`${skill} icon`}
             className="w-full h-full "
+            width={32}
+            height={32}
           />
         </span>
       )}
