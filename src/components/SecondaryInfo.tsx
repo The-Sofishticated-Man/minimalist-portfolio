@@ -159,34 +159,6 @@ function SecondaryInfo() {
           />
         </InfoSection>
       </div>
-      <div>
-        <InfoSection title="Education" id="education">
-          <EducationArticle
-            title="Bachelor in Computer Science"
-            entity="University of Ghardaia"
-            duration="2023 - Present"
-            img={ghardaiauniverstylogo}
-            courses={[
-              "Data Structures and Algorithms",
-              "Software Engineering Principles",
-              "Database Management Systems",
-              "Operating Systems",
-              "Computer Networks",
-              "Web Development",
-              "Probability and Statistics",
-              "Discrete Mathematics",
-              "Linear Algebra",
-              "Graph Theory",
-              "Mathematical Logic",
-              "Information Systems",
-              "Numerical Methods",
-              "Real Analysis",
-              "Calculus 1,2,3 and 4",
-              "Computer Architecture",
-            ]}
-          />
-        </InfoSection>
-      </div>
 
       <div>
         <InfoSection title="Projects" id="projects">
@@ -213,6 +185,7 @@ function SecondaryInfo() {
             links={{
               github:
                 "https://github.com/the-sofishticated-man/4-player-checkers",
+              demo: "https://the-sofishticated-man.github.io/4-player-checkers/",
             }}
           />{" "}
           <ProjectArticle
@@ -289,6 +262,39 @@ function SecondaryInfo() {
             }}
           />
         </InfoSection>
+        <div>
+          <InfoSection title="Education" id="education">
+            <InfoSection title="Education" id="education">
+              <EducationArticle
+                title="Bachelor in Computer Science"
+                entity="University of Ghardaia"
+                duration="2023 - Present"
+                img={ghardaiauniverstylogo}
+                courses={[
+                  "Data Structures and Algorithms",
+                  "Discrete Mathematics",
+                  "Artificial Intelligence",
+                  "Linear Algebra",
+                  "Computer Engineering",
+                  "Probability and Statistics",
+                  "Theory of Computation & Compilers",
+                  "Cybersecurity",
+                  "Mathematical Logic",
+                  "Operating Systems",
+                  "Calculus & Mathematical Analysis",
+                  "Database Management Systems",
+                  "Graph Theory",
+                  "Software Engineering",
+                  "Numerical Methods",
+                  "Object-Oriented Programming",
+                  "Computer Networks",
+                  "Web Development",
+                  "Information Systems Design",
+                ]}
+              />
+            </InfoSection>
+          </InfoSection>
+        </div>
       </div>
     </div>
   );
