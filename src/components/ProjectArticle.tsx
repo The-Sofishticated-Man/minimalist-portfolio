@@ -62,18 +62,17 @@ function ProjectArticle({
             {demo && (
               <a
                 href={demo}
-                className="inline-flex items-center justify-center sm:justify-start px-3 sm:px-4 py-2 bg-green-600 hover:bg-green-500 text-white rounded-lg border border-green-500 transition-all duration-300 hover:scale-105 text-xs sm:text-sm font-medium"
+                className="inline-flex gap-1 items-center justify-center sm:justify-start px-3 sm:px-4 py-2 bg-green-700 hover:bg-green-500 text-white rounded-lg border border-green-500 transition-all duration-300 hover:scale-105 text-xs sm:text-sm font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg
-                  className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                >
-                  <path d="M12.293 2.293a1 1 0 0 1 1.414 0l4 4A1 1 0 0 1 17 8h-1v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8H3a1 1 0 0 1-.707-1.707l4-4a1 1 0 0 1 1.414 0L10 3.586l2.293-2.293zM5 8v7a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8H5z" />
-                </svg>
+                <Image
+                  src={"/images/external-link.svg"}
+                  alt="demo link"
+                  width={25}
+                  height={25}
+                  color="white"
+                />
                 View Demo
               </a>
             )}
