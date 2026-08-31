@@ -1,14 +1,12 @@
 import SkillList from "./SkillList";
 
-function SkillArticle({
-  skills,
-  color,
-  title,
-}: {
-  skills: string[];
+type SkillArticleProps = {
+  skills: string[] | string[][];
   color?: "blue" | "red" | "green" | "yellow" | "purple" | "grey";
   title: string;
-}) {
+};
+
+function SkillArticle({ skills, color, title }: SkillArticleProps) {
   const colorMap = {
     blue: "border-blue-400/20",
     red: "border-red-400/20",
@@ -30,6 +28,10 @@ function SkillArticle({
   const borderClass = colorMap[color || "grey"];
   const titleColor = titleColorMap[color || "grey"];
 
+  // Normalize skills: figure out if it's an array of skills or strings lol
+  const normalizedSkills: string[][] = Array.isArray(skills[0])
+    ? (skills as string[][])
+    : [skills as string[]];
   return (
     <div
       className={`border-l-2 ${borderClass} pl-3 sm:pl-4 md:pl-5 lg:pl-6 py-2 sm:py-3 lg:py-4 transition-all duration-300 hover:border-opacity-60 group`}
@@ -39,7 +41,10 @@ function SkillArticle({
       >
         {title}
       </h4>
-      <SkillList skills={skills} color={color} />
+
+      {normalizedSkills.map((group, index) => (
+        <SkillList key={index} skills={group} color={color} />
+      ))}
     </div>
   );
 }

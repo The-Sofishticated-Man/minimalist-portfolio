@@ -20,11 +20,11 @@ function EducationArticle({
   return (
     <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 border border-white/10 transition-all duration-300 hover:bg-white/8 hover:border-white/20 group">
       {/* Timeline indicator */}
-      <div className="absolute -left-1.5 sm:-left-2 md:-left-3 lg:-left-4 top-4 sm:top-5 md:top-6 lg:top-6 xl:top-8 w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-full border-2 sm:border-2 md:border-3 lg:border-4 border-gray-900"></div>
+      <div className="absolute -left-1.5 sm:-left-2 md:-left-3 lg:-left-4 top-4 sm:top-5 md:top-6 lg:top-6 xl:top-8 w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 bg-green-400 rounded-full border-2 sm:border-2 md:border-3 lg:border-4 border-gray-900"></div>
 
       <div className="flex flex-col sm:flex-row sm:items-start mb-3 sm:mb-4 md:mb-5 lg:mb-6">
         <div className="relative mb-3 sm:mb-0 sm:mr-3 md:mr-4 lg:mr-5 xl:mr-6 group-hover:scale-105 transition-transform duration-300 self-center sm:self-start">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-blue-500/20 rounded-xl blur"></div>
+          <div className="absolute inset-0 bg-green-500/10 rounded-xl blur"></div>
           <div className="relative bg-white rounded-xl p-1.5 sm:p-2 md:p-2.5 lg:p-3 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 flex items-center justify-center overflow-hidden shadow-lg">
             <Image
               alt={`${university} logo`}
@@ -47,7 +47,7 @@ function EducationArticle({
           </p>
 
           <button
-            className="inline-flex items-center px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 hover:from-green-500/30 hover:to-blue-500/30 text-green-300 hover:text-green-200 rounded-lg border border-green-400/30 transition-all duration-300 text-xs sm:text-sm font-medium"
+            className="inline-flex items-center px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-green-700/10 hover:bg-green-700/20 text-green-300 hover:text-green-200 rounded-lg border border-green-400/30 transition-all duration-300 text-xs sm:text-sm font-medium"
             onClick={() => setShowingCourses(!isShowingCourses)}
           >
             {isShowingCourses ? "Hide Courses" : "View Courses"}
@@ -79,7 +79,7 @@ function EducationArticle({
                 key={index}
                 className="flex items-center p-2 lg:p-3 bg-white/5 rounded-lg border border-white/5 hover:bg-white/10 transition-colors duration-300"
               >
-                <div className="mr-2 lg:mr-3 w-1.5 h-1.5 lg:w-2 lg:h-2 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex-shrink-0"></div>
+                <div className="mr-2 lg:mr-3 w-1.5 h-1.5 lg:w-2 lg:h-2 bg-green-400 rounded-full flex-shrink-0"></div>
                 <span className="text-gray-300 text-xs sm:text-sm">
                   {course}
                 </span>

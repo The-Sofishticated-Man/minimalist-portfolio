@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Lameche Islam",
+  description: "portfolio site for lameche islam",
+};
 
 export default function RootLayout({
   children,

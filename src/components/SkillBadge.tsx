@@ -1,3 +1,7 @@
+"use client";
+import { useSkillsIcons } from "../context/SkillsIconsContext";
+import Image from "next/image";
+
 const colorMap: Record<string, string> = {
   blue: "bg-blue-500/30 text-blue-300 border-blue-400/50 hover:bg-blue-500/40 hover:text-blue-200",
   red: "bg-red-500/30 text-red-300 border-red-400/50 hover:bg-red-500/40 hover:text-red-200",
@@ -10,6 +14,9 @@ const colorMap: Record<string, string> = {
   grey: "bg-gray-500/30 text-gray-300 border-gray-400/50 hover:bg-gray-500/40 hover:text-gray-200",
 };
 
+const normalizeSkillName = (value: string) =>
+  value.toLowerCase().replace(/[^a-z0-9]+/g, "");
+
 function SkillBadge({
   skill,
   color,
@@ -17,14 +24,30 @@ function SkillBadge({
   skill: string;
   color?: "blue" | "red" | "green" | "yellow" | "purple" | "grey";
 }) {
+  const normalizedSkill = normalizeSkillName(skill);
+  const mappedIconName = normalizedSkill + ".svg";
+  const shouldUseIcon = useSkillsIcons();
+
   return (
     <span
-      className={`inline-block px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm font-medium mr-1 sm:mr-2 mb-2 sm:mb-3 rounded-full border backdrop-blur-sm transition-all duration-300 hover:scale-105 cursor-default ${
+      className={`inline-flex items-center gap-2 px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm font-medium mr-1 sm:mr-2 mb-2 sm:mb-3 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-105 cursor-default ${
         color ? colorMap[color] : colorMap.grey
       }`}
     >
-      {skill}
+      {shouldUseIcon && (
+        <span className="w- h-6 sm:w-8 sm:h-8 flex items-center justify-center ">
+          <Image
+            src={`/images/icons/${mappedIconName}`}
+            alt={`${skill} icon`}
+            className="w-full h-full "
+            width={32}
+            height={32}
+          />
+        </span>
+      )}
+      <span>{skill}</span>{" "}
     </span>
   );
 }
+
 export default SkillBadge;

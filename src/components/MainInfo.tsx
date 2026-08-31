@@ -28,7 +28,7 @@ export default function MainInfo() {
         duration: 1,
         ease: "back.out(1.7)",
         delay: 0.5,
-      }
+      },
     );
 
     // Floating animation
@@ -78,7 +78,7 @@ export default function MainInfo() {
   return (
     <div
       id="crucial"
-      className="w-full xl:flex-1 min-h-screen xl:h-[90vh] bg-gradient-to-br from-gray-900 to-black text-white flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 xl:px-8 py-8 lg:py-12 xl:py-16"
+      className="w-full xl:flex-1 min-h-screen xl:h-[90vh] bg-black text-white flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 xl:px-8 py-8 lg:py-12 xl:py-16"
     >
       <div className="text-center max-w-4xl w-full">
         {/* Profile Image with GSAP animations */}
@@ -105,18 +105,17 @@ export default function MainInfo() {
 
         {/* Subtitle */}
         <h2 className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl text-gray-400 mb-4 lg:mb-6 px-2">
-          Fullstack Web Developer | AI & Machine Learning
+          Full-Stack Engineer
         </h2>
 
         {/* Location */}
         <p className="text-gray-400 mb-6 lg:mb-8 text-xs sm:text-sm md:text-base">
-          📍 Algiers, Algeria 🇩🇿
+          📍 Algeria 🇩🇿
         </p>
 
         {/* Quote */}
         <p className="text-gray-300 text-xs sm:text-sm italic mb-6 lg:mb-8 border-l-2 border-gray-600 pl-3 lg:pl-4 mx-4 sm:mx-0">
-          &quot;Code is like humor. When you have to explain it, it&apos;s
-          bad.&quot;
+          &quot; Aut viam inveniam aut faciam. &quot;
         </p>
 
         {/* Action buttons */}
