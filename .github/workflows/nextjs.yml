@@ -73,6 +73,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Prevent GitHub Pages Jekyll processing
+        run: touch ./out/.nojekyll
       - name: Deploy to production repo
         uses: peaceiris/actions-gh-pages@v3
         with:
