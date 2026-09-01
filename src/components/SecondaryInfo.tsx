@@ -263,7 +263,6 @@ function SecondaryInfo() {
           />
         </InfoSection>
         <div>
-          <InfoSection title="Education" id="education">
             <InfoSection title="Education" id="education">
               <EducationArticle
                 title="Bachelor in Computer Science"
@@ -293,7 +292,6 @@ function SecondaryInfo() {
                 ]}
               />
             </InfoSection>
-          </InfoSection>
         </div>
       </div>
     </div>
