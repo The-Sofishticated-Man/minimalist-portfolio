@@ -17,11 +17,11 @@
 
 It serves as a professional portfolio to highlight your:
 
-- 🧠 Experience  
-- 🎓 Education  
-- 🚀 Projects  
+- 🧠 Experience
+- 🎓 Education
+- 🚀 Projects
 
-📍 **Live Demo**: [thesofishticatedman.me](https://thesofishticatedman.me)
+📍 **Live Demo**: [the-sofishticated-man.github.io](https://the-sofishticated-man.github.io)
 
 ---
 
@@ -43,14 +43,19 @@ It serves as a professional portfolio to highlight your:
 git clone https://github.com/The-Sofishticated-Man/minimalist-portfolio.git
 cd minimalist-portfolio
 ```
+
 ### 2. Install Dependencies
+
 ```bash
 npm install
 ```
+
 ### 3. Start the Development Server
+
 ```bash
 npm run dev
 ```
+
 ### 4. Deployment
 
 Deployment is automated using **GitHub Actions**. Every push to the `main` branch triggers you can find my action's script [here](https://github.com/The-Sofishticated-Man/The-Sofishticated-Man.github.io/blob/main/.github/workflows/nextjs.yml):
@@ -66,12 +71,15 @@ To deploy manually:
 ```bash
 yarn build
 ```
+
 Then copy the contents of the `out/` directory to your GitHub Pages repository (yourusername.github.io) and push.
 
 ## 🙌 Credits
+
 This project was inspired by the minimalist portfolio concept by
 [@OskarFranttiGlen](https://github.com/OskarFranttiGlen) — big thanks for the clean design approach and layout inspiration.
 
 ## 📄 License
+
 This project is licensed under the [MIT License](./LICENSE).
 You’re free to use, modify, and distribute it — just keep the license file.
