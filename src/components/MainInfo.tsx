@@ -121,7 +121,7 @@ export default function MainInfo() {
         {/* Action buttons */}
         <div className="mb-6 lg:mb-8">
           <a
-            href="/documents/islam lameche resume.pdf"
+            href="/documents/islam_lameche_resume.pdf"
             download="Islam_Lameche_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
