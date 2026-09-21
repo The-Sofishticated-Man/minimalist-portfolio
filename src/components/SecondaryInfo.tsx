@@ -111,7 +111,7 @@ function SecondaryInfo() {
           <ExperienceArticle
             title="Dev Team Leader"
             entity="Google Developer Groups"
-            duration="Feb 2023 - Present"
+            duration="Feb 2023 - Aug 2026"
             img={gdglogo}
             achievements={[
               "Led a team of 8 developers to deliver 5+ community-driven tech projects and workshops.",
